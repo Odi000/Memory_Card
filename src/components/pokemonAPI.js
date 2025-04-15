@@ -27,11 +27,12 @@ async function pokemonCollection() {
 
     return collection;
 
-    async function requestPokemon(name, collection) {
+    async function requestPokemon(pokName, collection) {
         try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokName}`);
             const parsedData = await response.json();
-            collection.push(parsedData);
+            const {name, id, sprites} = parsedData
+            collection.push({name, id, sprites});
         }
         catch (error) {
             console.log(error);

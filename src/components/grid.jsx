@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import pokemonCollection from "./pokemonAPI";
 import Card from "./card";
+import "../styles/grid.css"
 
 function CardContainer() {
     const [pokemonList, setPokemonList] = useState([]);
-    
+
     useEffect(() => {
         (async () => {
             const getPokemonList = await pokemonCollection();
@@ -17,15 +18,9 @@ function CardContainer() {
     return (
         <div id="card-container">
             {
-                (() => {
-                    const cardArr = [];
-                    for (let i = 0; i < 18; i++) {
-                        cardArr.push(
-                            <Card key={crypto.randomUUID()}></Card>
-                        )
-                    }
-                    return cardArr;
-                })()
+                pokemonList.map(pokemon => {
+                   return <Card key={pokemon.id} pokemon={pokemon}></Card>
+                })
             }
         </div>
     )

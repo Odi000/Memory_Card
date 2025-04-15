@@ -1,0 +1,35 @@
+.card {
+    font-size: 1.6rem;
+    text-align: center;
+    transition: scale .2s;
+}
+
+.card > * {
+    background-color: var(--card-bkg-color);
+    width: 100%;
+    border-radius: .4rem;
+    transition: background .2s;
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+.card:hover > * {
+    background-color: #6B5F7C;
+}
+
+.card div:first-child {
+    margin-bottom: .5rem;
+    height: 11rem;
+    display: grid;
+    place-items: center;
+}
+
+.card p {
+    padding: .4rem 0;
+}
+
+.card img {
+    width: 100%;
+}
