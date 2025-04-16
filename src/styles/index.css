@@ -10,6 +10,26 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   font-size: 10px;
-  font-family:"Inder", Arial, Helvetica, sans-serif;
+  font-family: "Inder", Arial, Helvetica, sans-serif;
   --card-bkg-color: #5C4F6F;
+}
+
+@media (max-width: 980px) {
+  :root {
+    font-size: 8px;
+  }
+
+  #root {
+    grid-template-rows: 1fr 2fr .5fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    grid-template-rows: 1fr 2fr .3fr;
+  }
+
+  div > #card-container {
+    grid-template-columns: repeat(4, 9rem);
+  }
 }

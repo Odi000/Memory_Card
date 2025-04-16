@@ -12,7 +12,7 @@ function Card({pokemon}){
 }
 
 function Sprite({url}){
-    return <img src={url}/>
+    return <img src={url} draggable="false"/>
 }
 
 export default Card;
