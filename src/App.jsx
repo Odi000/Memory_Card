@@ -22,8 +22,7 @@ function App() {
 		})()
 	}, []);
 
-
-
+	//Change the score bar color when gaining/losing points
 	useEffect(() => {
 		if (gameStats.score === 0 && gameStats.bestScore !== 0) {
 			const scoreEl = document.getElementById("score");
