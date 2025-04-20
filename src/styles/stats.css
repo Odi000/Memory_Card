@@ -17,3 +17,15 @@
     padding: .2rem .8rem;
     border-radius: .4rem;
 }
+
+p.shine {
+    background-color: #6B5F7C;
+    scale: 1.05;
+    transition: background .12s, scale .12s;
+}
+
+p.shine-red {
+    background-color: #8B4F6C;
+    scale: 1.05;
+    transition: background .12s, scale .12s;
+}
